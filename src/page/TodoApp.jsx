@@ -1,8 +1,8 @@
 import React from 'react'
 import { TodoItemsContext } from '../component/provider/TodoItemsProvider'
-import { Header } from '../component/header'
+import Header from '../component/header'
 import Input from '../component/input'
-import { ItemDisplay } from '../component/itemDisplay'
+import ItemDisplay from '../component/itemDisplay'
 import '../css/style--tailwind.css'
 
 export default function TodoApp() {

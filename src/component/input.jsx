@@ -1,10 +1,10 @@
 import React from 'react'
-import { MyModal } from './modal'
-import { InputButton } from './button/inputButton'
-import { LoadButton } from './button/loadButton'
+import MyModal from './modal'
+import InputButton from './button/inputButton'
+import LoadButton from './button/loadButton'
 
 /* 入力ボックス */
-export default function Input(props) {
+function Input(props) {
   const [text, setText] = React.useState('')
   const [isEmpty, setIsEmpty] = React.useState(false)
   const [modalTitle, setModalTitle] = React.useState('')
@@ -60,3 +60,5 @@ export default function Input(props) {
     </>
   )
 }
+
+export default { Input }

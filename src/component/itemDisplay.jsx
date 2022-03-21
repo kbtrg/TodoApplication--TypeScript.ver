@@ -1,9 +1,9 @@
 import React from 'react'
-import { TodoButton } from './button/todoButton'
+import TodoButton from './button/todoButton'
 import { TodoItemsContext } from './provider/TodoItemsProvider'
 
 /* Todoリスト */
-export const ItemDisplay = React.memo((props) => {
+const ItemDisplay = React.memo((props) => {
   const [items] = React.useContext(TodoItemsContext)
 
   // メイン関数のonCheckへ渡す
@@ -46,3 +46,5 @@ export const ItemDisplay = React.memo((props) => {
   )
 })
 ItemDisplay.displayName = 'ItemDisplay'
+
+export default { ItemDisplay }

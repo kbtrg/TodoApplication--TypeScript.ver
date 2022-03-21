@@ -15,7 +15,11 @@ export const useTodoData = () => {
     try {
       const res = await axios.get('https://jsonplaceholder.typicode.com/todos')
       const filteredData = res.data.filter((data) => data.id < 20) // データ条件
-      const loadedData = filteredData.map((data) => ({ key: getKey(), text: data.title, done: data.completed }))
+      const loadedData = filteredData.map((data) => ({
+        key: getKey(),
+        text: data.title,
+        done: data.completed,
+      }))
       setItems(loadedData)
     } catch (error) {
       console.log(error)
